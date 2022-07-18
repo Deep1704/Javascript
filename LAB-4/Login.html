@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+</head>
+<style>
+    input {
+        margin: 1rem 1rem 0 0;
+    }
+</style>
+
+<body>
+    Username :
+    <input type="text" id="username" /><br /> Password : <input type="password" id="password" />
+    <input type="button" value="show " id="toggleButton" onclick="password() " />
+    <br />
+    <input type="submit" value="submit" onclick="submit()" />
+    <script>
+        function password() {
+            temp1 = document.getElementById("password");
+            temp2 = document.getElementById("toggleButton");
+
+            if (temp1.type == "password") {
+                temp1.type = "text";
+                temp2.value = "hide";
+                console.log(temp2.value);
+            } else {
+                temp1.type = "password";
+                temp2.value = "show";
+                console.log(temp2.value);
+            }
+        }
+
+        function submit() {
+            temp1 = document.getElementById("username");
+            temp2 = document.getElementById("password");
+
+            if (temp1.value == "DeepChotaliya") {
+                if (temp2.value == "123456@3") {
+                    document.writeln("valid user");
+                } else {
+                    document.writelnl("Not valid user");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
